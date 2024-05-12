@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
   const url = window.location.origin.replace('localhost', '127.0.0.1') +
-     '/api/getM3u?sid=' + 'tplay' +
+     '/api/getM3u?sid=' + 'tataplay' +
     '&id=' + 'ninjatv' +
     '&sname=' + 'tataplay' +
     '&tkn=' + 'join@ninjatv3';
@@ -25,7 +25,7 @@ export default function Home() {
       redirect: 'follow'
     };
 
-    fetch(window.location.origin + '/api/getM3u?sid=' + 'tplay' + '_' + 'A' + '&id=' + 'ninjatv' + '&sname=' + 'tataplay' + '&tkn=' + 'join@ninjatv3', requestOptions)
+    fetch(window.location.origin + '/api/getM3u?sid=' + 'tataplay' + '_' + 'A' + '&id=' + 'ninjatv' + '&sname=' + 'tataplay' + '&tkn=' + 'join@ninjatv3', requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result);
