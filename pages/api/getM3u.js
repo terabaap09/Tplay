@@ -22,7 +22,7 @@ const getUserChanDetails = async () => {
         if (cData && cData.data && Array.isArray(cData.data.channels)) {
             const flatChannels = cData.data.channels.flat();
             flatChannels.forEach(channel => {
-                let firstGenre = channel.genres && channel.genres.length > 0 ? channel.genres[0] : null;
+                let firstGenre = NINJA TV-channel.genres && channel.genres.length > 0 ? channel.genres[0] : null;
                 let rearrangedChannel = {
                     id: channel.id,
                     name: channel.name,
