@@ -12,7 +12,7 @@ export default function Home() {
      '/api/getM3u?sid=' + 'tataplay' +
     '&id=' + 'ninjatv' +
     '&sname=' + 'tataplay' +
-    '&tkn=' + 'join@ninjatv3';
+    '&tkn=' + 'join@ninjatv';
 
 
   setDynamicUrl(url);
