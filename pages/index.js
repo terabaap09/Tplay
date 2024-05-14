@@ -25,7 +25,7 @@ export default function Home() {
       redirect: 'follow'
     };
 
-    fetch(window.location.origin + '/api/getM3u?sid=' + 'tataplay' + '_' + 'A' + '&id=' + 'ninjatv' + '&sname=' + 'tataplay' + '&tkn=' + 'join@ninjatv3', requestOptions)
+    fetch(window.location.origin + '/api/getM3u?sid=' + 'tataplay' + '_' + 'A' + '&id=' + 'ninjatv' + '&sname=' + 'tataplay' + '&tkn=' + 'join@ninjatv', requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result);
