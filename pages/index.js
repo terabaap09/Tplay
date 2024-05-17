@@ -12,7 +12,7 @@ export default function Home() {
      '/api/getM3u?sid=' + 'tataplay' +
     '&id=' + 'ninjatv' +
     '&sname=' + 'tataplay' +
-    '&tkn=' + 'join@ninjatv';
+    '&tkn=' + '@ninjatv';
 
 
   setDynamicUrl(url);
@@ -25,7 +25,7 @@ export default function Home() {
       redirect: 'follow'
     };
 
-    fetch(window.location.origin + '/api/getM3u?sid=' + 'tataplay' + '_' + 'A' + '&id=' + 'ninjatv' + '&sname=' + 'tataplay' + '&tkn=' + 'join@ninjatv', requestOptions)
+    fetch(window.location.origin + '/api/getM3u?sid=' + 'tataplay' + '_' + 'A' + '&id=' + 'ninjatv' + '&sname=' + 'tataplay' + '&tkn=' + '@ninjatv', requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result);
