@@ -64,14 +64,8 @@ const generateM3u = async (ud) => {
 
 
       
-    m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
-    m3uStr += 'group-title="JOIN US @NINJATV3 |' + (chansList[i].group_title) + '",  tvg-logo="https://ninjatv.lol/tata/copy.png' + (chansList[i].tvg_logo) + '", @NINJATV3'  + chansList[i].name + '\n';
-    m3uStr += '#KODIPROP:inputstream.adaptive.license_type=clearkey\n';
-    m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].clearkey + '\n';
-    m3uStr += '#EXTVLCOPT:http-user-agent=' + chansList[i].stream_headers + '\n';
-    m3uStr += '#EXTHTTP:{"cookie":"' + chansList[i].hma + '"}\n';
-    m3uStr +="https://ninjatv.lol/video/ninja/ninja.m3u8" chansList[i].stream_url + ' |cookie:' + chansList[i].hma + '\n\n';
-}
+m3uStr += '#EXTINF:-1 tvg-id="" tvg-name="NINJA TV" tvg-logo="https://ninjatv.lol/tata/copy.png" group-logo="https://ninjatv.lol/tata/copy.png" group-title="NINJA TV",NINJA TV\n';
+    m3uStr += 'https://ninjatv.lol/video/ninja/ninja.m3u8\n';
 
     console.log('all done!');
     return m3uStr;
