@@ -66,6 +66,7 @@ const generateM3u = async (ud) => {
       
 m3uStr += '#EXTINF:-1 tvg-id="" tvg-name="NINJA TV" tvg-logo="https://ninjatv.lol/tata/copy.png" group-logo="https://ninjatv.lol/tata/copy.png" group-title="NINJA TV",NINJA TV\n';
     m3uStr += 'https://ninjatv.lol/video/ninja/ninja.m3u8\n';
+      }
 
     console.log('all done!');
     return m3uStr;
