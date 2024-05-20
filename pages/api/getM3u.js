@@ -29,7 +29,7 @@ const getUserChanDetails = async () => {
                     tvg_id: channel.tvg_id,
                     group_title: firstGenre,
                     tvg_logo: channel.logo_url,
-                    stream_url:  channel.manifest_url,
+                    stream_url: channel.manifest_url,
                     license_url: channel.license_url,
                     stream_headers: channel.manifest_headers ? (channel.manifest_headers['User-Agent'] || JSON.stringify(channel.manifest_headers)) : null,
                     drm: channel.drm,
@@ -61,12 +61,14 @@ const generateM3u = async (ud) => {
     m3uStr = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml.gz"\n\n';
 
   for (let i = 0; i < chansList.length; i++) {
-
-
-      
-m3uStr += '#EXTINF:-1 tvg-id="" tvg-name="NINJA TV" tvg-logo="https://ninjatv.lol/tata/copy.png" group-logo="https://ninjatv.lol/tata/copy.png" group-title="JOIN US @NINJATV3",ROBIN HOOD\n';
-    m3uStr += 'https://video-iota-liard.vercel.app/ninja/ninja.m3u8\n';
-      }
+    m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
+    m3uStr += 'group-title="' + (chansList[i].group_title) + '", tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/' + (chansList[i].tvg_logo) + '", ' + chansList[i].name + '\n';
+    m3uStr += '#KODIPROP:inputstream.adaptive.license_type=clearkey\n';
+    m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].clearkey + '\n';
+    m3uStr += '#EXTVLCOPT:http-user-agent=' + chansList[i].stream_headers + '\n';
+    m3uStr += '#EXTHTTP:{"cookie":"' + chansList[i].hma + '"}\n';
+    m3uStr += chansList[i].stream_url + '|cookie:' + chansList[i].hma + '\n\n';
+}
 
     console.log('all done!');
     return m3uStr;
