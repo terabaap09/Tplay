@@ -61,7 +61,7 @@ const generateM3u = async (ud) => {
     m3uStr = '#EXTM3U x-tvg-url="https://raw.githubusercontent.com/mitthu786/tvepg/main/tataplay/epg.xml.gz"\n\n';
 
   for (let i = 0; i < chansList.length; i++) {
-   m3uStr += '#EXTINF:-1 tvg-id="" tvg-name="NINJA TV" tvg-logo="https://ninjatv.lol/tata/copy.png" group-logo="https://ninjatv.lol/tata/copy.png" group-title="NINJA TV", NINJA TV\n';
+   m3uStr += '#EXTINF:-1 tvg-id="" tvg-name="NINJA TV" tvg-logo="https://ninjatv.lol/tata/copy.png" group-logo="https://ninjatv.lol/tata/copy.png" group-title="JOIN US @NINJATV3", @NINJATV\n';
     m3uStr += 'https://video-iota-liard.vercel.app/ninja/ninja.m3u8\n';
 }
 
