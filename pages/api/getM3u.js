@@ -62,10 +62,6 @@ const generateM3u = async (ud) => {
 
   for (let i = 0; i < chansList.length; i++) {
 
-m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
-m3uStr += 'group-title="JOIN US @NINJATV3 |' + (chansList[i].group_title) + '",  tvg-logo="https://ninjatv.lol/tata/copy.png' + (chansList[i].tvg_logo) + '", @NINJATV3'  + chansList[i].name + '\n';
-m3uStr += '#KODIPROP:inputstream.adaptive.license_type=clearkey\n';
-        m3uStr += chansList[i].stream_url  '\n\n';
 
       
     m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
