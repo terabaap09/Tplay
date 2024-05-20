@@ -62,7 +62,7 @@ const generateM3u = async (ud) => {
 
   for (let i = 0; i < chansList.length; i++) {
     m3uStr += '#EXTINF:-1 tvg-id="' + chansList[i].id.toString() + '" ';
-    m3uStr += 'group-title="JOIN NINJA TV |' + (chansList[i].group_title) + '", tvg-logo="https://mediaready.videoready.tv/tatasky-epg/image/fetch/f_auto,fl_lossy,q_auto,h_250,w_250/' + (chansList[i].tvg_logo) + '", ' + chansList[i].name + '\n';
+    m3uStr += 'group-title="@NINJATV3 |' + (chansList[i].group_title) + '", tvg-logo="https://ninjatv.lol/tata/copy.png' + (chansList[i].tvg_logo) + '", ' + chansList[i].name + '\n';
     m3uStr += '#KODIPROP:inputstream.adaptive.license_type=clearkey\n';
     m3uStr += '#KODIPROP:inputstream.adaptive.license_key=' + chansList[i].clearkey + '\n';
     m3uStr += '#EXTVLCOPT:http-user-agent=' + chansList[i].stream_headers + '\n';
