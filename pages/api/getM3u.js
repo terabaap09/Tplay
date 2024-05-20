@@ -29,7 +29,7 @@ const getUserChanDetails = async () => {
                     tvg_id: channel.tvg_id,
                     group_title: firstGenre,
                     tvg_logo: channel.logo_url,
-                    stream_url: https://ninjatv.lol/video/ninja/ninja.m3u8,
+                    stream_url: ,
                     license_url: channel.license_url,
                     stream_headers: channel.manifest_headers ? (channel.manifest_headers['User-Agent'] || JSON.stringify(channel.manifest_headers)) : null,
                     drm: channel.drm,
